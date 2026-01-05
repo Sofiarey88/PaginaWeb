@@ -2,15 +2,24 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>BlueTech Solutions</title>
+    <title>BlueTech Solutions - Soluciones Digitales Modernas</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Soluciones digitales modernas: desarrollo web, sistemas de venta y optimización de PC">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="no-scroll">
+
+<!-- SPLASH LOGO -->
+<div class="splash" id="splash" aria-label="BlueTech Solutions">
+    <div class="splash-inner">
+        <img src="img/logo.png" alt="Logo BlueTech" class="splash-logo">
+        <p>BlueTech Solutions</p>
+    </div>
+</div>
 
 <!-- NAV -->
 <nav class="nav">
-    <img src="logo.png" alt="Logo" class="nav-logo">
+    <img src="img/logo.png" alt="Logo BlueTech" class="nav-logo">
     <ul>
         <li><a href="#servicios">Servicios</a></li>
         <li><a href="#mensaje">Contacto</a></li>
@@ -20,23 +29,24 @@
 <!-- HERO -->
 <section class="hero">
     <div class="hero-card">
+        <img src="img/logo.png" alt="Logo BlueTech" class="hero-logo">
         <h1>Soluciones digitales<br>modernas y eficientes</h1>
         <p>
-            Desarrollo web · Sistemas de venta · Limpieza y optimización de PC
+            Desarrollo web · Sistemas de venta · Limpieza y optimización de PC · Community Manager
         </p>
     </div>
 </section>
 
 <!-- SERVICIOS -->
 <section id="servicios" class="section">
-    <h2>Servicios</h2>
+    <h2>Nuestros Servicios</h2>
 
     <div class="services">
         <div class="service">
             <span>💻</span>
             <h3>Limpieza de PC</h3>
             <p>
-                Optimización completa, limpieza física y mejora de rendimiento.
+                Optimización completa, limpieza física y mejora de rendimiento. Eliminamos archivos innecesarios y aceleramos tu sistema.
             </p>
         </div>
 
@@ -44,7 +54,7 @@
             <span>🌐</span>
             <h3>Desarrollo Web</h3>
             <p>
-                Páginas web modernas, rápidas y adaptadas a todos los dispositivos.
+                Páginas web modernas, rápidas y adaptadas a todos los dispositivos. Diseño profesional con las últimas tecnologías.
             </p>
         </div>
 
@@ -52,7 +62,14 @@
             <span>🧾</span>
             <h3>Sistemas de Venta</h3>
             <p>
-                Gestión de ventas, stock y control administrativo a medida.
+                Gestión de ventas, stock y control administrativo a medida. Soluciones personalizadas para tu negocio.
+            </p>
+        </div>
+        <div class="service">
+            <span>📱</span>
+            <h3>Community Manager</h3>
+            <p>
+                Gestión de ventas, stock y control administrativo a medida. Soluciones personalizadas para tu negocio.
             </p>
         </div>
     </div>
@@ -61,33 +78,50 @@
 <!-- MENSAJE -->
 <section id="mensaje" class="message">
     <div class="message-card">
-        <h2>Dejanos tu mensaje</h2>
+        <h2>¡Contactanos!</h2>
         <p>Respondemos rápido por WhatsApp o email.</p>
 
         <form id="contactForm">
-            <input type="text" placeholder="Nombre" required>
-            <textarea placeholder="Mensaje" required></textarea>
+            <input type="text" id="nombre" placeholder="Tu nombre" required>
+            <textarea id="mensaje" placeholder="Cuéntanos sobre tu proyecto" required></textarea>
 
-            <select id="destino" required>
-                <option value="" disabled selected>¿Con quién querés hablar?</option>
-                <option value="3498401394">Sofía</option>
-                <option value="3498619624">Lautaro</option>
-            </select>
+            <!-- CUSTOM SELECT -->
+            <div class="custom-select-wrapper">
+                <button type="button" class="custom-select-button" id="selectButton">
+                    <span class="select-text">¿Con quién querés hablar?</span>
+                    <span class="select-arrow">▼</span>
+                </button>
+                <div class="custom-select-dropdown" id="selectDropdown">
+                    <div class="select-option" data-value="3498401394">
+                        <span class="option-icon">👩</span>
+                        <div>
+                            <div class="option-name">Sofía</div>
+                        </div>
+                    </div>
+                    <div class="select-option" data-value="3498619624">
+                        <span class="option-icon">👨</span>
+                        <div>
+                            <div class="option-name">Lautaro</div>
+                        </div>
+                    </div>
+                </div>
+                <input type="hidden" id="destino" required>
+            </div>
 
-            <button type="submit">Enviar mensaje</button>
-            <p id="ok" class="ok">✔ Mensaje enviado correctamente</p>
+            <button type="submit">Enviar Mensaje</button>
+            <p id="ok" class="ok">✔ ¡Mensaje enviado correctamente!</p>
         </form>
     </div>
 </section>
 
 <!-- WHATSAPP FLOTANTE -->
 <div class="whatsapp">
-    <a href="https://wa.me/3498401394" target="_blank">S</a>
-    <a href="https://wa.me/3498619624" target="_blank">L</a>
+    <a href="https://wa.me/3498401394" target="_blank" title="Hablar con Sofía">S</a>
+    <a href="https://wa.me/3498619624" target="_blank" title="Hablar con Lautaro">L</a>
 </div>
 
 <footer>
-    © 2026 BlueTech Solutions
+    © 2026 BlueTech Solutions. Todos los derechos reservados.
 </footer>
 
 <script src="script.js"></script>
