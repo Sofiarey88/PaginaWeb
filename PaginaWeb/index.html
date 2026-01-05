@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>BlueTech Solutions</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+    <img src="logo.png" alt="Logo" class="nav-logo">
+    <ul>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#mensaje">Contacto</a></li>
+    </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-card">
+        <h1>Soluciones digitales<br>modernas y eficientes</h1>
+        <p>
+            Desarrollo web · Sistemas de venta · Limpieza y optimización de PC
+        </p>
+    </div>
+</section>
+
+<!-- SERVICIOS -->
+<section id="servicios" class="section">
+    <h2>Servicios</h2>
+
+    <div class="services">
+        <div class="service">
+            <span>💻</span>
+            <h3>Limpieza de PC</h3>
+            <p>
+                Optimización completa, limpieza física y mejora de rendimiento.
+            </p>
+        </div>
+
+        <div class="service">
+            <span>🌐</span>
+            <h3>Desarrollo Web</h3>
+            <p>
+                Páginas web modernas, rápidas y adaptadas a todos los dispositivos.
+            </p>
+        </div>
+
+        <div class="service">
+            <span>🧾</span>
+            <h3>Sistemas de Venta</h3>
+            <p>
+                Gestión de ventas, stock y control administrativo a medida.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- MENSAJE -->
+<section id="mensaje" class="message">
+    <div class="message-card">
+        <h2>Dejanos tu mensaje</h2>
+        <p>Respondemos rápido por WhatsApp o email.</p>
+
+        <form id="contactForm">
+            <input type="text" placeholder="Nombre" required>
+            <textarea placeholder="Mensaje" required></textarea>
+
+            <select id="destino" required>
+                <option value="" disabled selected>¿Con quién querés hablar?</option>
+                <option value="3498401394">Sofía</option>
+                <option value="3498619624">Lautaro</option>
+            </select>
+
+            <button type="submit">Enviar mensaje</button>
+            <p id="ok" class="ok">✔ Mensaje enviado correctamente</p>
+        </form>
+    </div>
+</section>
+
+<!-- WHATSAPP FLOTANTE -->
+<div class="whatsapp">
+    <a href="https://wa.me/3498401394" target="_blank">S</a>
+    <a href="https://wa.me/3498619624" target="_blank">L</a>
+</div>
+
+<footer>
+    © 2026 BlueTech Solutions
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
