@@ -163,15 +163,25 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             const target = document.querySelector(targetId);
             if (target) {
                 e.preventDefault();
+                e.stopPropagation();
                 
                 const navHeight = nav.offsetHeight;
-                const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navHeight;
+                const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navHeight - 10;
                 
+                // Detener cualquier scroll en progreso
+                document.documentElement.style.scrollBehavior = 'auto';
+                
+                // Realizar el scroll
                 window.scrollTo({
                     top: targetPosition,
                     behavior: 'smooth'
                 });
+                
+                // Restaurar scroll behavior después de un momento
+                setTimeout(() => {
+                    document.documentElement.style.scrollBehavior = '';
+                }, 1000);
             }
         }
-    });
+    }, { passive: false });
 });

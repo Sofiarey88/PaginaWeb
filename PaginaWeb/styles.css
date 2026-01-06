@@ -17,7 +17,6 @@
 }
 
 html {
-    scroll-behavior: smooth;
     height: 100%;
     background-color: #0a0e27;
     width: 100%;
@@ -36,6 +35,8 @@ body {
     position: relative;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-y;
 }
 
 .no-scroll {
