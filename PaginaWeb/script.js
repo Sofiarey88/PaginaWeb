@@ -12,7 +12,6 @@ window.addEventListener("load", () => {
 
     setTimeout(() => {
         splash.classList.add("hidden");
-        document.body.classList.remove("no-scroll");
 
         setTimeout(() => splash.remove(), 650);
     }, 700);
