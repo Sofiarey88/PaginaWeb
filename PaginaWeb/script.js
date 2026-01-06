@@ -156,13 +156,22 @@ window.addEventListener("scroll", function() {
 // Smooth scroll para links de navegación
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
+        const targetId = this.getAttribute('href');
+        
+        // Solo prevenir si el target existe
+        if (targetId && targetId !== '#') {
+            const target = document.querySelector(targetId);
+            if (target) {
+                e.preventDefault();
+                
+                const navHeight = nav.offsetHeight;
+                const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navHeight;
+                
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }
         }
     });
 });
